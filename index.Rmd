@@ -1,0 +1,82 @@
+---
+title: "Assignment1"
+author: "Yilin Wang"
+date: "20/03/2022"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, message = FALSE)
+```
+
+## GitHub repository information: https://github.com/MissPangDing/STATS220.git
+There are six pictures of Chihuahua.Three pictures are angry Chihuahuas, and three are guilty and cute Chihuahuas.
+
+```{r}
+library(magick)
+```
+```{r}
+
+counts <- 6 : 1 %>% as.character()
+
+image1 <- image_read("https://www.tshseo.com/tu/2020/1f397e3ce632c61bf2e11e314c018b0a.jpg") %>%
+  image_scale(500)
+image2 <- image_read("https://www.mercurynews.com/wp-content/uploads/2020/12/SJM-L-WEDJOAN-12-02-01_79154951.jpg") %>%
+  image_scale(500)
+image3 <- image_read("https://images.saymedia-content.com/.image/t_share/MTc0OTY4NTc1MDA0NTE3ODI4/a-chihuahua-temperament-the-good-the-bad-and-the-ugly.jpg") %>%
+  image_scale(500)
+image4 <- image_read("https://thehappypuppysite.com/wp-content/uploads/2018/03/teacup-chihuahua-header-SH.jpg") %>%
+  image_scale(500)
+image5 <- image_read("https://animals.net/wp-content/uploads/2018/06/Chihuahua-9_long-haired-650x425.jpg") %>%
+  image_scale(500)
+image6 <- image_read("https://t2.ea.ltmcdn.com/en/posts/4/3/7/when_do_chihuahuas_stop_growing_1734_orig.jpg") %>%
+  image_scale(500)
+
+  
+
+frame1 <- image1 %>%
+  image_annotate(text ="WHEN I QUARREL WITH MY BOYFRIEND\nOVER A TREIFILE." , size = 20, color = "#880000",gravity = "center") %>%
+  image_scale(300) %>%
+  image_extent("500x500")
+
+frame2 <- image2 %>%
+  image_annotate(text = "WHEN I QUARREL WITH MY BOYFRIEND\nOVER A TREIFILE.", size = 20, color = "#880000",gravity = "center") %>%
+  image_scale(400) %>%
+  image_extent("500x500")
+
+frame3 <- image3 %>%
+  image_annotate(text = "WHEN I QUARREL WITH MY BOYFRIEND\nOVER A TREIFILE.", size = 20,color = "#880000", gravity = "center") %>%
+  image_scale(600) %>%
+  image_extent("500x500")
+
+
+frame4 <- image4 %>%
+  image_annotate(text = "BUT ON THE WAY\nI FOUND OUT THAT HE WAS RIGHT.", size = 20, color = "#008888",gravity = "center") %>%
+  image_scale(600)%>%
+  image_extent("500x500")
+  
+
+frame5 <- image5 %>%
+  image_annotate(text = "BUT ON THE WAY\nI FOUND OUT THAT HE WAS RIGHT.", size = 20, color = "#008888",gravity = "center") %>%
+  image_scale(400) %>%
+  image_extent("500x500")
+
+frame6 <- image6 %>%
+  image_annotate(text = "BUT ON THE WAY\nI FOUND OUT THAT HE WAS RIGHT.", size = 20, color = "#008888",gravity = "center") %>%
+  image_scale(300) %>%
+  image_extent("500x500")
+
+
+
+frames <- c( frame1, frame2, frame3, frame4, frame5, frame6)
+
+
+image_animate(frames, fps = 0.5)
+```
+```{css}
+p {font-weight: bold;}
+h1{color: #008888}
+body {background-color:#FFFFBB}
+```
+#Learning reflection
+<p>In this assignment, I am more familiar with the use of Lab1A content and Lab1B content, so that I will have a deeper memory of the knowledge inside. Let me more skillfully distinguish the difference between the grammatical usage of python and the grammatical usage of R. And I can use R studio relatively flexibly to create the pictures and gif pictures I want.At the same time, I am also familiar with the use of GitHub, effectively improve my work efficiency.They are both programming tools that I will continue to use. Because GitHub and R studio have made me more and more familiar with how they are used in this assignment. This effectively helps me to bring portability to me in the future office.</p>
