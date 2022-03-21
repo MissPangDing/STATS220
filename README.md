@@ -1,6 +1,6 @@
 # STATS220
 
-[My repository link!!!]
+[My repository link](https://github.com/MissPangDing/STATS220.git)
 
 ## About me
 
