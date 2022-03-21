@@ -1,6 +1,6 @@
 # STATS220
 
-Hi guys!!! Welcome to my test website! 
+[My repository link!!!]
 
 ## About me
 
